@@ -22,9 +22,9 @@ public class Categoria implements Serializable {
 		
 	}
 	
-	public Categoria(Integer id, String nomeString) {
+	public Categoria(Integer id, String nome) {
 		this.id = id;
-		this.nome = nomeString;
+		this.nome = nome;
 	}
 	public Integer getId() {
 		return id;
@@ -32,11 +32,11 @@ public class Categoria implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getNomeString() {
+	public String getNome() {
 		return nome;
 	}
-	public void setNomeString(String nomeString) {
-		this.nome = nomeString;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	@Override
