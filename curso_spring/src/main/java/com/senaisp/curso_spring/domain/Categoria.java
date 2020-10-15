@@ -2,13 +2,21 @@ package com.senaisp.curso_spring.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Categoria implements Serializable {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String nomeString;
+	private String nome;
 	
 	public Categoria() {
 		
@@ -16,7 +24,7 @@ public class Categoria implements Serializable {
 	
 	public Categoria(Integer id, String nomeString) {
 		this.id = id;
-		this.nomeString = nomeString;
+		this.nome = nomeString;
 	}
 	public Integer getId() {
 		return id;
@@ -25,10 +33,10 @@ public class Categoria implements Serializable {
 		this.id = id;
 	}
 	public String getNomeString() {
-		return nomeString;
+		return nome;
 	}
 	public void setNomeString(String nomeString) {
-		this.nomeString = nomeString;
+		this.nome = nomeString;
 	}
 
 	@Override
