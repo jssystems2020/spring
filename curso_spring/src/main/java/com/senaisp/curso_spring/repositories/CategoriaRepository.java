@@ -1,5 +1,6 @@
 package com.senaisp.curso_spring.repositories;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
