@@ -1,5 +1,6 @@
 package com.senaisp.curso_spring.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,4 +18,9 @@ public class CategoriaService {
 		Optional<Categoria> obj = rep.findById(id);
 		return obj.orElse(null);
 	}
+	public List<Categoria> retornaTudo() {
+		List<Categoria> obj = rep.findAll();
+		return obj;
+	}
+
 }
